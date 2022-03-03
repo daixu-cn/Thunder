@@ -1,0 +1,135 @@
+/*
+ * @Author: daixu 
+ * @Date: 2019-11-29 15:09:19 
+ * @Last Modified by: daixu
+ * @Last Modified time: 2019-12-14 19:06:54
+ */
+/* 信息展示组件开始 */
+.infoShow {
+    position: relative;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+    cursor: pointer;
+    font-size: 1.25em;
+}
+
+.infoShow::after {
+    content: "";
+    position: absolute;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: scale(0, 1);
+    transform: scale(0, 1);
+    left: 30px;
+    right: 30px;
+    top: 30px;
+    bottom: 30px;
+    margin: auto;
+    opacity: 0;
+    -webkit-transition: opacity 1s, -webkit-transform 1s;
+    transition: opacity 1s, -webkit-transform 1s;
+    transition: transform 1s, opacity 1s;
+    transition: transform 1s, opacity 1s, -webkit-transform 1s;
+}
+
+.infoShow::before {
+    content: "";
+    position: absolute;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    -webkit-transform: scale(1, 0);
+    transform: scale(1, 0);
+    left: 30px;
+    right: 30px;
+    top: 30px;
+    bottom: 30px;
+    margin: auto;
+    opacity: 0;
+    -webkit-transition: opacity 1s, -webkit-transform 1s;
+    transition: opacity 1s, -webkit-transform 1s;
+    transition: transform 1s, opacity 1s;
+    transition: transform 1s, opacity 1s, -webkit-transform 1s;
+}
+
+.infoShow:hover {
+    background: rgba(53, 172, 197, 1);
+}
+
+.infoShow:hover::after,
+.infoShow:hover::before {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.infoShow>img {
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+}
+
+.infoShow:hover>img {
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+    opacity: 0.4;
+}
+
+.infoShow .infoText {
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    top: 30px;
+    bottom: 30px;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: space-around;
+    -ms-flex-align: space-around;
+    align-items: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+    opacity: 0 !important;
+}
+
+.infoShow .infoText>p {
+    color: #fff !important;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    letter-spacing: 1px;
+    font-size: 68.5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.infoShow:hover .infoText {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1 !important;
+}
+
+/* 信息展示组件结束 */
